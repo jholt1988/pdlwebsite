@@ -122,13 +122,23 @@ const About = () => {
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Story</h2>
               <div className="space-y-4 text-gray-700 leading-relaxed">
                 <p>
-                Founded in 2013 by Paul Senior and Paul Junior, with their longtime friend Anthony joining shortly after, we're passionate about providing quality housing in Wichita. We believe everyone deserves a fresh start, and our mission is to empower individuals and families to rebuild their lives in a safe, supportive environment. PDL is named after Paul Senior's wife and Paul Junior's mother, Dixie, and Paul Senior's two daughters and Paul Junior's sisters, Pam and Lynn. Our team is made up of experienced property managers and maintenance staff who are dedicated to providing excellent service. We believe in being responsive to our tenants' needs and creating a positive living experience for everyone in our communities. We're committed to being a positive force in the South Side community. We partner with local organizations to support our residents and contribute to the neighborhood's well-being. We believe that by working together, we can create a stronger, more vibrant community for everyone. We're a family-run business, and we treat our residents like family too. We're committed to providing a safe, comfortable, and welcoming place to call home. We understand that finding the right place to live is important. That's why we offer a variety of floor plans and amenities to fit your needs and budget. We're confident you'll find the perfect place to call home at PDL."
+              
+                Founded in 2013 by Paul LaBrue Sr. and Paul LaBrue Jr. with their longtime assistant  and right hand man Anthony Reyna joining shortly after, we're passionate about providing quality housing in Wichita. We believe everyone deserves a fresh start, and our mission is to empower individuals and families to rebuild their lives in a safe, supportive environment. PDL is named after Paul Senior's wife and Paul Junior's mother, Dixie, and Paul Senior's two daughters and Paul Junior's sisters, Pam and Lynn. Our team is made up of experienced property managers and maintenance staff who are dedicated to providing excellent service. We believe in being responsive to our tenants' needs and creating a positive living experience for everyone in our communities. We're committed to being a positive force in the South Side community. We partner with local organizations to support our residents and contribute to the neighborhood's well-being. We believe that by working together, we can create a stronger, more vibrant community for everyone. We're a family-run business, and we treat our residents like family too. We're committed to providing a safe, comfortable, and welcoming place to call home. We understand that finding the right place to live is important. That's why we offer a variety of floor plans and amenities to fit your needs and budget. We're confident you'll find the perfect place to call home at PDL
+Established in 2013 by Paul LaBrue Sr. and Paul LaBrue Jr., with the subsequent inclusion of their long-standing personal assistant and right-hand man Anthony Reyna, PDL functions as a family-owned enterprise dedicated to providing high-quality housing solutions in Wichita. The company's name is an acronym formed from Paul Senior's spouse and Paul Junior's mother, Dixie, along with Paul Senior's two daughters and Paul Junior's sisters, Pam and Lynn.
+
+Our organizational mission is to facilitate the rehabilitation of individuals' and families' lives within a secure and supportive environment, predicated on the conviction that every individual merits a renewed beginning. Our team consists of experienced property management and maintenance personnel, all committed to delivering exemplary service. We prioritize expeditious responses to our tenants' requirements, endeavoring to cultivate a positive residential experience for all inhabitants within our communities.
+
+We are steadfast in our commitment to acting as a constructive influence within the South Side community, fostering collaborations with local organizations to support our residents and contribute to the overall welfare of the neighborhood. We posit that collaborative endeavors can yield a more robust and dynamic community for all stakeholders.
+
+At PDL, we extend familial regard to our residents, dedicated to furnishing a secure, comfortable, and hospitable dwelling. We comprehend the significance of identifying appropriate living accommodations, which is why we proffer a diverse selection of floor plans and amenities tailored to accommodate varying needs and fiscal parameters. We are confident that prospective residents will discover their ideal abode with us.
 
 
+                </p>
+ 
 
 
+              <p>
 
-I
                   Our success is measured not just in units managed, but in the lives we've touched: 
                   families who have found stability, children who have thrived in safe neighborhoods, 
                   and communities that have been strengthened by our presence.
