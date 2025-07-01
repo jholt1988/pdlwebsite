@@ -147,53 +147,55 @@ const Home = () => {
     <div className="space-y-0">
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-primary-900 via-primary-800 to-accent-900 text-white overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-primary-900/80 via-transparent to-accent-900/80"></div>
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width=60 height=60 viewBox =0 0 60 60 xmlns="http://www.w3.org/2000/svg%3E%3Cg" fill="none" fill-rule="evenodd%3E%3Cg" fill="%23ffffff" fill-opacity="0.05"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="animate-fade-in-up">
-              <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-accent-500 to-secondary-500 rounded-full text-sm font-semibold mb-6 shadow-glow">
-                <span className="animate-pulse mr-2">●</span>
-                Fresh Starts Available Now
+        <>
+          <div className="absolute inset-0 bg-gradient-to-r from-primary-900/80 via-transparent to-accent-900/80"></div>
+          <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width=60 height=60 viewBox=0 0 60 60 xmlns=http://www.w3.org/2000/svg%3E%3Cg fill=none fill-rule=evenodd%3E%3Cg fill=%23ffffff fill-opacity=0.05%3E%3Ccircle cx=30 cy=30 r=2/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div className="animate-fade-in-up">
+                <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-accent-500 to-secondary-500 rounded-full text-sm font-semibold mb-6 shadow-glow">
+                  <span className="animate-pulse mr-2">●</span>
+                  Fresh Starts Available Now
+                </div>
+                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+                  Fresh Starts Begin
+                  <span className="bg-gradient-to-r from-accent-400 via-secondary-400 to-electric-400 bg-clip-text text-transparent"> at Home</span>
+                </h1>
+                <p className="text-xl text-primary-100 mb-8 max-w-lg leading-relaxed">
+                  Family-owned and operated in Wichita and Augusta, we provide quality affordable housing 
+                  for individuals and families seeking a fresh start and a place to call home.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <Link
+                    to="/properties"
+                    className="group bg-gradient-to-r from-accent-600 to-accent-700 hover:from-accent-700 hover:to-accent-800 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 inline-flex items-center justify-center shadow-accent-glow hover:shadow-glow-lg transform hover:-translate-y-1"
+                  >
+                    View Available Homes
+                    <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                  </Link>
+                  <Link
+                    to="/contact"
+                    className="group bg-transparent border-2 border-white/30 backdrop-blur-sm text-white hover:bg-white/10 hover:border-white/50 px-8 py-4 rounded-xl font-semibold transition-all duration-300 inline-flex items-center justify-center"
+                  >
+                    Contact Us
+                  </Link>
+                </div>
               </div>
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6">
-                Fresh Starts Begin
-                <span className="bg-gradient-to-r from-accent-400 via-secondary-400 to-electric-400 bg-clip-text text-transparent"> at Home</span>
-              </h1>
-              <p className="text-xl text-primary-100 mb-8 max-w-lg leading-relaxed">
-                Family-owned and operated in Wichita and Augusta, we provide quality affordable housing 
-                for individuals and families seeking a fresh start and a place to call home.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Link
-                  to="/properties"
-                  className="group bg-gradient-to-r from-accent-600 to-accent-700 hover:from-accent-700 hover:to-accent-800 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 inline-flex items-center justify-center shadow-accent-glow hover:shadow-glow-lg transform hover:-translate-y-1"
-                >
-                  View Available Homes
-                  <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-                </Link>
-                <Link
-                  to="/contact"
-                  className="group bg-transparent border-2 border-white/30 backdrop-blur-sm text-white hover:bg-white/10 hover:border-white/50 px-8 py-4 rounded-xl font-semibold transition-all duration-300 inline-flex items-center justify-center"
-                >
-                  Contact Us
-                </Link>
-              </div>
-            </div>
-            
-            {/* Hero Image */}
-            <div className="animate-slide-in-right">
-              <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-r from-accent-500/20 to-secondary-500/20 rounded-2xl blur-xl"></div>
-                <img
-                  src="/src/assets/Hydraulic2.webp"
-                  alt="PDL Rentals community homes in Wichita"
-                  className="relative rounded-2xl shadow-modern-lg"
-                />
+              
+              {/* Hero Image */}
+              <div className="animate-slide-in-right">
+                <div className="relative">
+                  <div className="absolute inset-0 bg-gradient-to-r from-accent-500/20 to-secondary-500/20 rounded-2xl blur-xl"></div>
+                  <img
+                    src="/src/assets/Hydraulic2.webp"
+                    alt="PDL Rentals community homes in Wichita"
+                    className="relative rounded-2xl shadow-modern-lg"
+                  />
+                </div>
               </div>
             </div>
           </div>
-        </div>
+        </>
       </section>
 
       {/* Portal Access Section */}
@@ -474,7 +476,7 @@ const Home = () => {
 
       {/* CTA Section */}
       <section className="bg-gradient-to-br from-primary-900 via-primary-800 to-accent-900 text-white py-16 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.05"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width=60 height=60 viewBox=0 0 60 60 xmlns=http://www.w3.org/2000/svg%3E%3Cg fill=none fill-rule=evenodd%3E%3Cg fill=%23ffffff fill-opacity=0.05%3E%3Ccircle cx=30 cy=30 r=2/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold mb-4">Ready for Your Fresh Start?</h2>
           <p className="text-xl text-primary-100 mb-8 max-w-2xl mx-auto">
