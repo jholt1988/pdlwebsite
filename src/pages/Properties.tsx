@@ -73,6 +73,186 @@ const Properties = () => {
       features: ['Family-Friendly', 'Updated Interiors', 'Parking', 'Community Programs', 'Playground', 'Resident Support'],
       description: 'Well-maintained family homes with updated interiors and community amenities. Perfect for families looking for affordable housing in a supportive environment.',
       amenities: ['Family-Friendly', 'Updated Interiors', 'Community Programs', 'Resident Support']
+    },
+    {
+      id: 5,
+      image: 'https://images.pexels.com/photos/1396122/pexels-photo-1396122.jpeg?auto=compress&cs=tinysrgb&w=800',
+      title: '1807 West Maple',
+      location: 'West Wichita',
+      bedrooms: 3,
+      bathrooms: 2,
+      sqft: 1100,
+      rent: 875,
+      deposit: 875,
+      available: '2024-02-15',
+      features: ['Spacious Layout', 'Updated Kitchen', 'Fenced Yard', 'Garage', 'Near Parks', 'Quiet Neighborhood'],
+      description: 'Beautiful home on West Maple with spacious rooms and modern updates. Features a large fenced yard and garage in a quiet residential neighborhood.',
+      amenities: ['Spacious Layout', 'Updated Kitchen', 'Fenced Yard', 'Garage']
+    },
+    {
+      id: 6,
+      image: 'https://images.pexels.com/photos/1396132/pexels-photo-1396132.jpeg?auto=compress&cs=tinysrgb&w=800',
+      title: '2946 Bunkerhill',
+      location: 'Northeast Wichita',
+      bedrooms: 2,
+      bathrooms: 1,
+      sqft: 850,
+      rent: 725,
+      deposit: 725,
+      available: '2024-02-20',
+      features: ['Cozy Home', 'Updated Flooring', 'Large Backyard', 'Storage Shed', 'Pet-Friendly', 'Near Shopping'],
+      description: 'Charming home on Bunkerhill with updated flooring and a large backyard. Perfect for small families or professionals seeking a comfortable living space.',
+      amenities: ['Cozy Home', 'Updated Flooring', 'Large Backyard', 'Pet-Friendly']
+    },
+    {
+      id: 7,
+      image: 'https://images.pexels.com/photos/1396125/pexels-photo-1396125.jpeg?auto=compress&cs=tinysrgb&w=800',
+      title: '2948 Bunkerhill',
+      location: 'Northeast Wichita',
+      bedrooms: 2,
+      bathrooms: 1,
+      sqft: 875,
+      rent: 750,
+      deposit: 750,
+      available: '2024-02-22',
+      features: ['Recently Updated', 'Modern Appliances', 'Covered Porch', 'Off-street Parking', 'Near Schools', 'Quiet Street'],
+      description: 'Recently updated home on Bunkerhill featuring modern appliances and a covered front porch. Located on a quiet street with convenient access to schools.',
+      amenities: ['Recently Updated', 'Modern Appliances', 'Covered Porch', 'Near Schools']
+    },
+    {
+      id: 8,
+      image: 'https://images.pexels.com/photos/1396119/pexels-photo-1396119.jpeg?auto=compress&cs=tinysrgb&w=800',
+      title: '525 E Lincoln',
+      location: 'Central Wichita',
+      bedrooms: 2,
+      bathrooms: 1,
+      sqft: 800,
+      rent: 650,
+      deposit: 650,
+      available: '2024-02-25',
+      features: ['Central Location', 'Hardwood Floors', 'Updated Bathroom', 'Walk-in Closet', 'Near Downtown', 'Transit Access'],
+      description: 'Centrally located home on East Lincoln with beautiful hardwood floors and updated bathroom. Easy access to downtown and public transportation.',
+      amenities: ['Central Location', 'Hardwood Floors', 'Updated Bathroom', 'Transit Access']
+    },
+    {
+      id: 9,
+      image: 'https://images.pexels.com/photos/1396117/pexels-photo-1396117.jpeg?auto=compress&cs=tinysrgb&w=800',
+      title: '1204 S. Emporia',
+      location: 'South Wichita',
+      bedrooms: 3,
+      bathrooms: 1,
+      sqft: 950,
+      rent: 800,
+      deposit: 800,
+      available: '2024-03-01',
+      features: ['Three Bedrooms', 'Large Living Room', 'Dining Area', 'Basement Storage', 'Corner Lot', 'Mature Trees'],
+      description: 'Spacious three-bedroom home on South Emporia with large living areas and basement storage. Located on a corner lot with mature trees.',
+      amenities: ['Three Bedrooms', 'Large Living Room', 'Basement Storage', 'Corner Lot']
+    },
+    {
+      id: 10,
+      image: 'https://images.pexels.com/photos/1396127/pexels-photo-1396127.jpeg?auto=compress&cs=tinysrgb&w=800',
+      title: '1952 Jackson',
+      location: 'Riverside',
+      bedrooms: 2,
+      bathrooms: 1,
+      sqft: 775,
+      rent: 675,
+      deposit: 675,
+      available: '2024-03-05',
+      features: ['Riverside Location', 'Updated Kitchen', 'Tile Flooring', 'Patio Area', 'Near River', 'Peaceful Setting'],
+      description: 'Cozy home on Jackson in the Riverside area with updated kitchen and tile flooring. Features a patio area in a peaceful setting near the river.',
+      amenities: ['Riverside Location', 'Updated Kitchen', 'Patio Area', 'Peaceful Setting']
+    },
+    {
+      id: 11,
+      image: 'https://images.pexels.com/photos/1396130/pexels-photo-1396130.jpeg?auto=compress&cs=tinysrgb&w=800',
+      title: '1954 Jackson',
+      location: 'Riverside',
+      bedrooms: 2,
+      bathrooms: 1,
+      sqft: 800,
+      rent: 700,
+      deposit: 700,
+      available: '2024-03-08',
+      features: ['Riverside Living', 'Renovated Interior', 'New Carpet', 'Window AC Units', 'Garden Space', 'Quiet Area'],
+      description: 'Recently renovated home on Jackson with new carpet and updated interior. Features garden space in a quiet riverside neighborhood.',
+      amenities: ['Riverside Living', 'Renovated Interior', 'Garden Space', 'Quiet Area']
+    },
+    {
+      id: 12,
+      image: 'https://images.pexels.com/photos/1396134/pexels-photo-1396134.jpeg?auto=compress&cs=tinysrgb&w=800',
+      title: '2053 N Market',
+      location: 'North Wichita',
+      bedrooms: 3,
+      bathrooms: 2,
+      sqft: 1150,
+      rent: 925,
+      deposit: 925,
+      available: '2024-03-10',
+      features: ['North Side Location', 'Two Full Baths', 'Master Bedroom', 'Attached Garage', 'Large Lot', 'Near Shopping'],
+      description: 'Spacious home on North Market with two full bathrooms and attached garage. Located on a large lot with convenient access to shopping.',
+      amenities: ['Two Full Baths', 'Master Bedroom', 'Attached Garage', 'Large Lot']
+    },
+    {
+      id: 13,
+      image: 'https://images.pexels.com/photos/1396123/pexels-photo-1396123.jpeg?auto=compress&cs=tinysrgb&w=800',
+      title: '2042 S. Topeka',
+      location: 'South Wichita',
+      bedrooms: 2,
+      bathrooms: 1,
+      sqft: 825,
+      rent: 725,
+      deposit: 725,
+      available: '2024-03-12',
+      features: ['South Side Living', 'Open Floor Plan', 'Updated Fixtures', 'Covered Parking', 'Fenced Yard', 'Near Parks'],
+      description: 'Well-maintained home on South Topeka with open floor plan and updated fixtures. Features covered parking and fenced yard near parks.',
+      amenities: ['Open Floor Plan', 'Updated Fixtures', 'Covered Parking', 'Fenced Yard']
+    },
+    {
+      id: 14,
+      image: 'https://images.pexels.com/photos/1396128/pexels-photo-1396128.jpeg?auto=compress&cs=tinysrgb&w=800',
+      title: '2044 S. Topeka',
+      location: 'South Wichita',
+      bedrooms: 2,
+      bathrooms: 1,
+      sqft: 850,
+      rent: 750,
+      deposit: 750,
+      available: '2024-03-15',
+      features: ['Duplex Style', 'Private Entrance', 'Updated Kitchen', 'Laundry Hookups', 'Storage Space', 'Parking Available'],
+      description: 'Duplex-style home on South Topeka with private entrance and updated kitchen. Includes laundry hookups and ample storage space.',
+      amenities: ['Private Entrance', 'Updated Kitchen', 'Laundry Hookups', 'Storage Space']
+    },
+    {
+      id: 15,
+      image: 'https://images.pexels.com/photos/1396121/pexels-photo-1396121.jpeg?auto=compress&cs=tinysrgb&w=800',
+      title: '1419 S. Market',
+      location: 'South Wichita',
+      bedrooms: 3,
+      bathrooms: 1,
+      sqft: 975,
+      rent: 825,
+      deposit: 825,
+      available: '2024-03-18',
+      features: ['Three Bedrooms', 'Corner Property', 'Large Kitchen', 'Dining Room', 'Basement', 'Established Neighborhood'],
+      description: 'Spacious three-bedroom home on South Market with large kitchen and dining room. Corner property with basement in established neighborhood.',
+      amenities: ['Three Bedrooms', 'Large Kitchen', 'Dining Room', 'Basement']
+    },
+    {
+      id: 16,
+      image: 'https://images.pexels.com/photos/1396126/pexels-photo-1396126.jpeg?auto=compress&cs=tinysrgb&w=800',
+      title: '231 E 12th',
+      location: 'Augusta, KS',
+      bedrooms: 2,
+      bathrooms: 1,
+      sqft: 750,
+      rent: 625,
+      deposit: 625,
+      available: '2024-03-20',
+      features: ['Augusta Location', 'Small Town Living', 'Updated Interior', 'Front Porch', 'Near Schools', 'Community Feel'],
+      description: 'Charming home in Augusta with updated interior and front porch. Perfect for those seeking small town living with community feel.',
+      amenities: ['Small Town Living', 'Updated Interior', 'Front Porch', 'Community Feel']
     }
   ];
 
@@ -81,14 +261,25 @@ const Properties = () => {
       case 'Recently Renovated':
       case 'Updated Kitchens':
       case 'Updated Interiors':
+      case 'Recently Updated':
+      case 'Renovated Interior':
+      case 'Updated Kitchen':
+      case 'Updated Bathroom':
+      case 'Updated Fixtures':
         return <CheckCircle className="h-4 w-4" />;
       case 'Safe Neighborhood':
+      case 'Quiet Area':
+      case 'Peaceful Setting':
         return <Shield className="h-4 w-4" />;
       case 'Community Support':
       case 'Community Programs':
       case 'Family-Friendly':
+      case 'Community Feel':
         return <Users className="h-4 w-4" />;
       case 'Design District Location':
+      case 'Central Location':
+      case 'Riverside Location':
+      case 'Small Town Living':
         return <Star className="h-4 w-4" />;
       default:
         return <CheckCircle className="h-4 w-4" />;
@@ -248,9 +439,9 @@ const Properties = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="mb-8">
-          <h1 className="text-3xl font-bold text-gray-900 mb-4">Available Homes in Wichita</h1>
+          <h1 className="text-3xl font-bold text-gray-900 mb-4">Available Homes in Wichita & Augusta</h1>
           <p className="text-lg text-gray-600">
-            Discover quality, affordable homes in established Wichita neighborhoods. 
+            Discover quality, affordable homes in established neighborhoods throughout Wichita and Augusta. 
             Each property is professionally managed and maintained to provide comfortable, safe living.
           </p>
         </div>
@@ -331,10 +522,10 @@ const Properties = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-4">
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">Neighborhood</label>
+              <label className="block text-sm font-medium text-gray-700 mb-2">Location</label>
               <input
                 type="text"
-                placeholder="South Side, Historic..."
+                placeholder="Wichita, Augusta..."
                 className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
                 value={filters.location}
                 onChange={(e) => setFilters({...filters, location: e.target.value})}
@@ -402,13 +593,13 @@ const Properties = () => {
 
         {/* Results */}
         <div className="mb-6">
-          <p className="text-gray-600">{properties.length} quality homes available</p>
+          <p className="text-gray-600">{properties.length} quality homes available across Wichita and Augusta</p>
         </div>
 
         {/* Properties Grid/List */}
         <div className={
           viewMode === 'grid' 
-            ? "grid grid-cols-1 md:grid-cols-2 xl:grid-cols-2 gap-8"
+            ? "grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8"
             : "space-y-6"
         }>
           {properties.map((property) => 

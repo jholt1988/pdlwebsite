@@ -47,6 +47,42 @@ const Home = () => {
       available: '2024-01-20',
       features: ['Design District Location', 'Transit Access', 'Community Support', 'Safe Neighborhood'],
       isSpecial: true
+    },
+    {
+      id: 4,
+      image: 'https://images.pexels.com/photos/1396122/pexels-photo-1396122.jpeg?auto=compress&cs=tinysrgb&w=800',
+      title: '1807 West Maple',
+      location: 'West Wichita',
+      bedrooms: 3,
+      bathrooms: 2,
+      sqft: 1100,
+      rent: 875,
+      available: '2024-02-15',
+      features: ['Spacious Layout', 'Updated Kitchen', 'Fenced Yard', 'Garage']
+    },
+    {
+      id: 5,
+      image: 'https://images.pexels.com/photos/1396132/pexels-photo-1396132.jpeg?auto=compress&cs=tinysrgb&w=800',
+      title: 'Bunkerhill Residences',
+      location: 'Northeast Wichita',
+      bedrooms: 2,
+      bathrooms: 1,
+      sqft: 850,
+      rent: 725,
+      available: '2024-02-20',
+      features: ['Cozy Homes', 'Updated Flooring', 'Large Backyards', 'Pet-Friendly']
+    },
+    {
+      id: 6,
+      image: 'https://images.pexels.com/photos/1396126/pexels-photo-1396126.jpeg?auto=compress&cs=tinysrgb&w=800',
+      title: '231 E 12th Augusta',
+      location: 'Augusta, KS',
+      bedrooms: 2,
+      bathrooms: 1,
+      sqft: 750,
+      rent: 625,
+      available: '2024-03-20',
+      features: ['Small Town Living', 'Updated Interior', 'Front Porch', 'Community Feel']
     }
   ];
 
@@ -74,7 +110,7 @@ const Home = () => {
   ];
 
   const stats = [
-    { icon: TrendingUp, label: 'Years Serving Wichita', value: '11+' },
+    { icon: TrendingUp, label: 'Years Serving Communities', value: '11+' },
     { icon: HomeIcon, label: 'Quality Homes Provided', value: '200+' },
     { icon: Users, label: 'Residents Served', value: '500+' },
     { icon: Heart, label: 'Fresh Starts Enabled', value: '300+' },
@@ -120,7 +156,7 @@ const Home = () => {
                 <span className="text-accent-400"> at Home</span>
               </h1>
               <p className="text-xl text-primary-100 mb-8 max-w-lg">
-                Family-owned and operated in Wichita, we provide quality affordable housing 
+                Family-owned and operated in Wichita and Augusta, we provide quality affordable housing 
                 for individuals and families seeking a fresh start and a place to call home.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
@@ -196,15 +232,15 @@ const Home = () => {
 
           {/* Search Section */}
           <div className="bg-white rounded-xl shadow-lg p-6">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">Find Your New Home in Wichita</h2>
+            <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">Find Your New Home in Wichita & Augusta</h2>
             <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">Neighborhood</label>
+                <label className="block text-sm font-medium text-gray-700 mb-2">Location</label>
                 <div className="relative">
                   <MapPin className="absolute left-3 top-3 h-4 w-4 text-gray-400" />
                   <input
                     type="text"
-                    placeholder="South Side, Historic District..."
+                    placeholder="Wichita, Augusta..."
                     className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
                     value={searchFilters.location}
                     onChange={(e) => setSearchFilters({...searchFilters, location: e.target.value})}
@@ -264,7 +300,7 @@ const Home = () => {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Why Choose PDL Rentals</h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              As a family-owned business in Wichita, we understand the importance of home. 
+              As a family-owned business serving Wichita and Augusta, we understand the importance of home. 
               We're committed to providing quality, affordable housing with the personal touch that only comes from local ownership.
             </p>
           </div>
@@ -289,9 +325,9 @@ const Home = () => {
       <section className="bg-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Impact in Wichita</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Impact in Wichita & Augusta</h2>
             <p className="text-lg text-gray-600">
-              Since 2013, we've been helping individuals and families find quality, affordable homes in Wichita's South Side.
+              Since 2013, we've been helping individuals and families find quality, affordable homes throughout the area.
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -317,7 +353,7 @@ const Home = () => {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Available Homes</h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Discover quality, affordable homes in Wichita's established neighborhoods. 
+              Discover quality, affordable homes in Wichita and Augusta's established neighborhoods. 
               Each property is professionally managed and maintained to provide comfortable living.
             </p>
           </div>
@@ -428,7 +464,7 @@ const Home = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold mb-4">Ready for Your Fresh Start?</h2>
           <p className="text-xl text-primary-100 mb-8 max-w-2xl mx-auto">
-            Join our community of residents who have found quality, affordable homes in Wichita. 
+            Join our community of residents who have found quality, affordable homes in Wichita and Augusta. 
             Let our family help your family find the perfect place to call home.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

@@ -39,17 +39,17 @@ const RetroHome = () => {
     {
       icon: Users,
       title: "Community Living",
-      description: "Fostering genuine connections and neighborly bonds in thoughtfully designed communities across Wichita."
+      description: "Fostering genuine connections and neighborly bonds in thoughtfully designed communities across Wichita and Augusta."
     },
     {
       icon: Award,
       title: "Trusted Heritage",
-      description: "Over 15 years of excellence in property management, building lasting relationships with residents and families."
+      description: "Over 11 years of excellence in property management, building lasting relationships with residents and families."
     },
     {
       icon: Heart,
       title: "Fresh Beginnings",
-      description: "Providing opportunities for new starts and second chances in safe, welcoming communities."
+      description: "Providing opportunities for new starts and second chances in safe, welcoming communities throughout the area."
     }
   ];
 
@@ -70,7 +70,7 @@ const RetroHome = () => {
       name: "Maria Rodriguez",
       text: "After some difficult times, PDL gave my family the fresh start we needed. We're grateful for their understanding and support.",
       year: "Resident Since 2020",
-      community: "Volusia Commons"
+      community: "West Maple"
     }
   ];
 
@@ -102,6 +102,69 @@ const RetroHome = () => {
       description: 'Beautiful historic homes with original character and thoughtful modern improvements.',
       price: 'From $950',
       features: ['Historic Charm', 'Updated Kitchens', 'Near Schools']
+    },
+    {
+      id: 4,
+      image: 'https://images.pexels.com/photos/1396122/pexels-photo-1396122.jpeg?auto=compress&cs=tinysrgb&w=800',
+      title: 'West Maple Collection',
+      subtitle: 'West Wichita',
+      description: 'Spacious family homes with modern updates, fenced yards, and garage parking in quiet neighborhoods.',
+      price: 'From $875',
+      features: ['Spacious Layout', 'Garage Parking', 'Fenced Yards']
+    },
+    {
+      id: 5,
+      image: 'https://images.pexels.com/photos/1396132/pexels-photo-1396132.jpeg?auto=compress&cs=tinysrgb&w=800',
+      title: 'Bunkerhill Residences',
+      subtitle: 'Northeast Wichita',
+      description: 'Cozy homes with updated features, large backyards, and convenient access to shopping and schools.',
+      price: 'From $725',
+      features: ['Updated Features', 'Large Backyards', 'Near Shopping']
+    },
+    {
+      id: 6,
+      image: 'https://images.pexels.com/photos/1396119/pexels-photo-1396119.jpeg?auto=compress&cs=tinysrgb&w=800',
+      title: 'Central Wichita Homes',
+      subtitle: 'Downtown Area',
+      description: 'Centrally located properties with hardwood floors, updated bathrooms, and excellent transit access.',
+      price: 'From $650',
+      features: ['Central Location', 'Hardwood Floors', 'Transit Access']
+    },
+    {
+      id: 7,
+      image: 'https://images.pexels.com/photos/1396127/pexels-photo-1396127.jpeg?auto=compress&cs=tinysrgb&w=800',
+      title: 'Riverside Living',
+      subtitle: 'Jackson Street',
+      description: 'Peaceful riverside homes with updated kitchens, patio areas, and serene natural settings.',
+      price: 'From $675',
+      features: ['Riverside Location', 'Updated Kitchens', 'Peaceful Setting']
+    },
+    {
+      id: 8,
+      image: 'https://images.pexels.com/photos/1396134/pexels-photo-1396134.jpeg?auto=compress&cs=tinysrgb&w=800',
+      title: 'North Market Properties',
+      subtitle: 'North Wichita',
+      description: 'Spacious homes with multiple bathrooms, attached garages, and large lots near shopping centers.',
+      price: 'From $925',
+      features: ['Multiple Bathrooms', 'Attached Garages', 'Large Lots']
+    },
+    {
+      id: 9,
+      image: 'https://images.pexels.com/photos/1396123/pexels-photo-1396123.jpeg?auto=compress&cs=tinysrgb&w=800',
+      title: 'South Side Collection',
+      subtitle: 'Topeka & Market Streets',
+      description: 'Well-maintained homes with open floor plans, updated fixtures, and convenient neighborhood locations.',
+      price: 'From $725',
+      features: ['Open Floor Plans', 'Updated Fixtures', 'Convenient Location']
+    },
+    {
+      id: 10,
+      image: 'https://images.pexels.com/photos/1396126/pexels-photo-1396126.jpeg?auto=compress&cs=tinysrgb&w=800',
+      title: 'Augusta Charm',
+      subtitle: 'Augusta, Kansas',
+      description: 'Small town living with updated interiors, front porches, and strong community connections.',
+      price: 'From $625',
+      features: ['Small Town Living', 'Front Porches', 'Community Feel']
     }
   ];
 
@@ -151,7 +214,7 @@ const RetroHome = () => {
               
               <p className="hero-subtitle">
                 Timeless elegance meets modern comfort in our carefully curated 
-                collection of quality affordable housing communities across Wichita.
+                collection of quality affordable housing communities across Wichita and Augusta.
               </p>
               
               <div className="hero-buttons">
@@ -175,7 +238,7 @@ const RetroHome = () => {
             <h2 className="section-title">The PDL Difference</h2>
             <div className="decorative-line"></div>
             <p style={{ textAlign: 'center', fontSize: '1.1rem', color: 'var(--vintage-charcoal)', maxWidth: '600px', margin: '0 auto' }}>
-              Family-owned and operated in Wichita, we believe everyone deserves a quality home and a fresh start.
+              Family-owned and operated across Wichita and Augusta, we believe everyone deserves a quality home and a fresh start.
             </p>
           </div>
           
@@ -203,7 +266,7 @@ const RetroHome = () => {
             <h2 className="section-title">Featured Communities</h2>
             <div className="decorative-line"></div>
             <p style={{ textAlign: 'center', fontSize: '1.1rem', color: 'var(--vintage-charcoal)', maxWidth: '700px', margin: '0 auto' }}>
-              Discover quality, affordable homes in established Wichita neighborhoods where families thrive and communities flourish.
+              Discover quality, affordable homes in established neighborhoods throughout Wichita and Augusta where families thrive and communities flourish.
             </p>
           </div>
           
@@ -264,7 +327,7 @@ const RetroHome = () => {
             <h2 className="section-title">Resident Stories</h2>
             <div className="decorative-line"></div>
             <p style={{ textAlign: 'center', fontSize: '1.1rem', color: 'var(--vintage-charcoal)', maxWidth: '600px', margin: '0 auto' }}>
-              Hear from residents who have found their home and fresh start with PDL Rentals.
+              Hear from residents who have found their home and fresh start with PDL Rentals across our communities.
             </p>
           </div>
           
@@ -299,7 +362,7 @@ const RetroHome = () => {
             <div className="contact-info">
               <h2 className="section-title">Get in Touch</h2>
               <p className="contact-description">
-                Experience the difference of quality affordable housing in Wichita. 
+                Experience the difference of quality affordable housing in Wichita and Augusta. 
                 Contact our family today to learn about available homes and schedule your personal tour.
               </p>
               
@@ -383,6 +446,13 @@ const RetroHome = () => {
                     <option value="the-sharon">The Sharon - Douglas Design District</option>
                     <option value="volusia">Volusia Commons - South Wichita</option>
                     <option value="ida">Ida Heritage - Historic District</option>
+                    <option value="west-maple">West Maple Collection</option>
+                    <option value="bunkerhill">Bunkerhill Residences</option>
+                    <option value="central">Central Wichita Homes</option>
+                    <option value="riverside">Riverside Living</option>
+                    <option value="north-market">North Market Properties</option>
+                    <option value="south-side">South Side Collection</option>
+                    <option value="augusta">Augusta Charm</option>
                     <option value="general">General Information</option>
                   </select>
                 </div>
