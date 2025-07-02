@@ -1,9 +1,13 @@
 import React, { useState } from 'react';
-import { User, Home, DollarSign, FileText, Upload, CheckCircle, ArrowLeft, ArrowRight, Phone, Mail } from 'lucide-react';
+import { User, Home, DollarSign, FileText, Upload, CheckCircle, ArrowLeft, ArrowRight, Phone, Mail, AlertCircle } from 'lucide-react';
+import { submitApplication, validateFile, formatFileSize, type ApplicationFormData } from '../utils/applicationApi';
 
 const Application = () => {
   const [currentStep, setCurrentStep] = useState(1);
-  const [formData, setFormData] = useState({
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitSuccess, setSubmitSuccess] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
+  const [formData, setFormData] = useState<ApplicationFormData>({
     // Personal Information
     firstName: '',
     lastName: '',
@@ -15,7 +19,7 @@ const Application = () => {
     // Rental Preferences
     propertyType: '',
     bedrooms: '',
-    maxRent: '',
+    maxRent: 0,
     moveInDate: '',
     leaseTerm: '',
     pets: '',
@@ -23,9 +27,9 @@ const Application = () => {
     // Employment & Income
     employer: '',
     position: '',
-    monthlyIncome: '',
+    monthlyIncome: 0,
     employmentLength: '',
-    additionalIncome: '',
+    additionalIncome: 0,
     
     // References
     previousLandlord: '',
@@ -36,12 +40,15 @@ const Application = () => {
     reference2Phone: '',
     
     // Documents
-    idDocument: null,
-    incomeProof: null,
-    additionalDocs: null,
+    documents: {
+      idDocument: null,
+      incomeProof: null,
+      additionalDocs: null,
+    }
   });
 
   const [errors, setErrors] = useState<Record<string, string>>({});
+  const [fileErrors, setFileErrors] = useState<Record<string, string>>({});
 
   const steps = [
     { number: 1, title: 'Personal Info', icon: User },
@@ -53,7 +60,12 @@ const Application = () => {
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
+    setFormData(prev => ({ 
+      ...prev, 
+      [name]: name === 'maxRent' || name === 'monthlyIncome' || name === 'additionalIncome' 
+        ? parseFloat(value) || 0 
+        : value 
+    }));
     
     // Clear error when user starts typing
     if (errors[name]) {
@@ -64,7 +76,22 @@ const Application = () => {
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, files } = e.target;
     if (files && files[0]) {
-      setFormData(prev => ({ ...prev, [name]: files[0] }));
+      const file = files[0];
+      const validation = validateFile(file);
+      
+      if (!validation.isValid) {
+        setFileErrors(prev => ({ ...prev, [name]: validation.error || 'Invalid file' }));
+        return;
+      }
+      
+      setFileErrors(prev => ({ ...prev, [name]: '' }));
+      setFormData(prev => ({ 
+        ...prev, 
+        documents: {
+          ...prev.documents,
+          [name]: file
+        }
+      }));
     }
   };
 
@@ -84,19 +111,23 @@ const Application = () => {
       case 2:
         if (!formData.propertyType) newErrors.propertyType = 'Property type is required';
         if (!formData.bedrooms) newErrors.bedrooms = 'Number of bedrooms is required';
-        if (!formData.maxRent) newErrors.maxRent = 'Maximum rent is required';
+        if (!formData.maxRent || formData.maxRent <= 0) newErrors.maxRent = 'Maximum rent is required';
         if (!formData.moveInDate) newErrors.moveInDate = 'Move-in date is required';
         if (!formData.leaseTerm) newErrors.leaseTerm = 'Lease term is required';
         break;
       case 3:
         if (!formData.employer.trim()) newErrors.employer = 'Employer is required';
         if (!formData.position.trim()) newErrors.position = 'Position is required';
-        if (!formData.monthlyIncome) newErrors.monthlyIncome = 'Monthly income is required';
+        if (!formData.monthlyIncome || formData.monthlyIncome <= 0) newErrors.monthlyIncome = 'Monthly income is required';
         if (!formData.employmentLength) newErrors.employmentLength = 'Employment length is required';
         break;
       case 4:
         if (!formData.reference1Name.trim()) newErrors.reference1Name = 'Reference name is required';
         if (!formData.reference1Phone.trim()) newErrors.reference1Phone = 'Reference phone is required';
+        break;
+      case 5:
+        if (!formData.documents?.idDocument) newErrors.idDocument = 'ID document is required';
+        if (!formData.documents?.incomeProof) newErrors.incomeProof = 'Proof of income is required';
         break;
     }
 
@@ -123,9 +154,58 @@ const Application = () => {
       return;
     }
 
-    // Simulate form submission
-    alert('Application submitted successfully! We\'ll review your application and contact you within 24-48 hours.');
+    setIsSubmitting(true);
+    setSubmitError(null);
+
+    try {
+      const result = await submitApplication(formData);
+      
+      if (result.success) {
+        setSubmitSuccess(true);
+      } else {
+        setSubmitError(result.error?.message || 'Application submission failed');
+        if (result.error?.details) {
+          setErrors(result.error.details);
+        }
+      }
+    } catch (error) {
+      setSubmitError('An unexpected error occurred. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
+
+  // Success screen
+  if (submitSuccess) {
+    return (
+      <div className="min-h-screen bg-gray-50 py-8">
+        <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="bg-white rounded-xl shadow-lg p-8 text-center">
+            <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+              <CheckCircle className="h-8 w-8 text-green-600" />
+            </div>
+            <h1 className="text-3xl font-bold text-gray-900 mb-4">Application Submitted Successfully!</h1>
+            <p className="text-lg text-gray-600 mb-6">
+              Thank you for your application. We'll review your information and contact you within 24-48 hours.
+            </p>
+            <div className="bg-gray-50 rounded-lg p-4 mb-6">
+              <p className="text-sm text-gray-600">
+                <strong>What's next?</strong><br />
+                Our team will review your application and verify the information provided. 
+                You'll receive an email confirmation shortly with your application reference number.
+              </p>
+            </div>
+            <button
+              onClick={() => window.location.reload()}
+              className="bg-primary-800 hover:bg-primary-900 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
+            >
+              Submit Another Application
+            </button>
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   const renderStepContent = () => {
     switch (currentStep) {
@@ -305,7 +385,7 @@ const Application = () => {
                   type="number"
                   id="maxRent"
                   name="maxRent"
-                  value={formData.maxRent}
+                  value={formData.maxRent || ''}
                   onChange={handleInputChange}
                   placeholder="3000"
                   className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent ${
@@ -429,7 +509,7 @@ const Application = () => {
                   type="number"
                   id="monthlyIncome"
                   name="monthlyIncome"
-                  value={formData.monthlyIncome}
+                  value={formData.monthlyIncome || ''}
                   onChange={handleInputChange}
                   placeholder="5000"
                   className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent ${
@@ -471,7 +551,7 @@ const Application = () => {
                 type="number"
                 id="additionalIncome"
                 name="additionalIncome"
-                value={formData.additionalIncome}
+                value={formData.additionalIncome || ''}
                 onChange={handleInputChange}
                 placeholder="0"
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
@@ -597,7 +677,7 @@ const Application = () => {
             
             <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4 mb-6">
               <p className="text-yellow-800">
-                Please upload the required documents to complete your application. All files should be in PDF, JPG, or PNG format.
+                Please upload the required documents to complete your application. All files should be in PDF, JPG, PNG, DOC, or DOCX format and under 10MB.
               </p>
             </div>
 
@@ -611,9 +691,19 @@ const Application = () => {
                   id="idDocument"
                   name="idDocument"
                   onChange={handleFileChange}
-                  accept=".pdf,.jpg,.jpeg,.png"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                  accept=".pdf,.jpg,.jpeg,.png,.doc,.docx"
+                  className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent ${
+                    errors.idDocument || fileErrors.idDocument ? 'border-red-500' : 'border-gray-300'
+                  }`}
                 />
+                {formData.documents?.idDocument && (
+                  <p className="mt-1 text-sm text-green-600">
+                    ✓ {formData.documents.idDocument.name} ({formatFileSize(formData.documents.idDocument.size)})
+                  </p>
+                )}
+                {(errors.idDocument || fileErrors.idDocument) && (
+                  <p className="mt-1 text-sm text-red-600">{errors.idDocument || fileErrors.idDocument}</p>
+                )}
               </div>
 
               <div>
@@ -625,9 +715,19 @@ const Application = () => {
                   id="incomeProof"
                   name="incomeProof"
                   onChange={handleFileChange}
-                  accept=".pdf,.jpg,.jpeg,.png"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                  accept=".pdf,.jpg,.jpeg,.png,.doc,.docx"
+                  className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent ${
+                    errors.incomeProof || fileErrors.incomeProof ? 'border-red-500' : 'border-gray-300'
+                  }`}
                 />
+                {formData.documents?.incomeProof && (
+                  <p className="mt-1 text-sm text-green-600">
+                    ✓ {formData.documents.incomeProof.name} ({formatFileSize(formData.documents.incomeProof.size)})
+                  </p>
+                )}
+                {(errors.incomeProof || fileErrors.incomeProof) && (
+                  <p className="mt-1 text-sm text-red-600">{errors.incomeProof || fileErrors.incomeProof}</p>
+                )}
               </div>
 
               <div>
@@ -639,9 +739,19 @@ const Application = () => {
                   id="additionalDocs"
                   name="additionalDocs"
                   onChange={handleFileChange}
-                  accept=".pdf,.jpg,.jpeg,.png"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                  accept=".pdf,.jpg,.jpeg,.png,.doc,.docx"
+                  className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent ${
+                    fileErrors.additionalDocs ? 'border-red-500' : 'border-gray-300'
+                  }`}
                 />
+                {formData.documents?.additionalDocs && (
+                  <p className="mt-1 text-sm text-green-600">
+                    ✓ {formData.documents.additionalDocs.name} ({formatFileSize(formData.documents.additionalDocs.size)})
+                  </p>
+                )}
+                {fileErrors.additionalDocs && (
+                  <p className="mt-1 text-sm text-red-600">{fileErrors.additionalDocs}</p>
+                )}
                 <p className="mt-1 text-sm text-gray-500">
                   Include any additional documentation that supports your application
                 </p>
@@ -714,6 +824,15 @@ const Application = () => {
 
         {/* Form */}
         <div className="bg-white rounded-xl shadow-lg p-8">
+          {submitError && (
+            <div className="mb-6 bg-red-50 border border-red-200 rounded-lg p-4">
+              <div className="flex items-center">
+                <AlertCircle className="h-5 w-5 text-red-600 mr-2" />
+                <p className="text-red-800">{submitError}</p>
+              </div>
+            </div>
+          )}
+
           <form onSubmit={handleSubmit}>
             {renderStepContent()}
 
@@ -745,10 +864,20 @@ const Application = () => {
               ) : (
                 <button
                   type="submit"
-                  className="flex items-center px-6 py-3 bg-green-600 hover:bg-green-700 text-white font-medium rounded-lg transition-colors"
+                  disabled={isSubmitting}
+                  className="flex items-center px-6 py-3 bg-green-600 hover:bg-green-700 disabled:bg-gray-400 text-white font-medium rounded-lg transition-colors"
                 >
-                  Submit Application
-                  <CheckCircle className="h-4 w-4 ml-2" />
+                  {isSubmitting ? (
+                    <>
+                      <div className="animate-spin rounded-full h-4 w-4 border-2 border-white border-t-transparent mr-2"></div>
+                      Submitting...
+                    </>
+                  ) : (
+                    <>
+                      Submit Application
+                      <CheckCircle className="h-4 w-4 ml-2" />
+                    </>
+                  )}
                 </button>
               )}
             </div>
