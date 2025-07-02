@@ -123,17 +123,18 @@ const About = () => {
               <div className="space-y-4 text-gray-700 leading-relaxed">
                 <p>
               
-                Founded in 2013 by the visionary duo Paul LaBrue Sr. and Paul LaBrue Jr., and later joined by their steadfast friend and long-time associate Anthony Reyna, PDL stands as a testament to family legacy and unwavering dedication, delivering unparalleled housing solutions in Wichita. The very essence of the company's name, PDL, is woven from the fabric of their lives: Dixie, the beloved matriarch, Paul Senior's cherished wife and Paul Junior's devoted mother; and Pam and Lynn, Paul Senior's daughters and Paul Junior's sisters, whose spirits infuse every endeavor.<br>
-
+                Founded in 2013 by the visionary duo Paul LaBrue Sr. and Paul LaBrue Jr., and later joined by their steadfast friend and long-time associate Anthony Reyna, PDL stands as a testament to family legacy and unwavering dedication, delivering unparalleled housing solutions in Wichita. The very essence of the company's name, PDL, is woven from the fabric of their lives: Dixie, the beloved matriarch, Paul Senior's cherished wife and Paul Junior's devoted mother; and Pam and Lynn, Paul Senior's daughters and Paul Junior's sisters, whose spirits infuse every endeavor.</p>
+<p>
 Our organizational mission is to facilitate the rehabilitation of individuals' and families' lives within a secure and supportive environment, predicated on the conviction that every individual merits a renewed beginning. Our team consists of experienced property management and maintenance personnel, all committed to delivering exemplary service. We prioritize expeditious responses to our tenants' requirements, endeavoring to cultivate a positive residential experience for all inhabitants within our communities.
-
+  </p>
+<p>
 We are unwavering in our commitment to being a positive force within the South Side community, forging dynamic collaborations with local organizations to uplift our residents and enrich the entire neighborhood. We believe that through unified efforts, we can cultivate an even more vibrant and thriving community for everyone.
 
+</p>
 
-
-
+<p>
 At PDL, we extend familial regard to our residents, dedicated to furnishing a secure, comfortable, and hospitable dwelling. We comprehend the significance of identifying appropriate living accommodations, which is why we proffer a diverse selection of floor plans and amenities tailored to accommodate varying needs and fiscal parameters. We are confident that prospective residents will discover their ideal abode with us.
-
+</p>
 
                 </p>
  
