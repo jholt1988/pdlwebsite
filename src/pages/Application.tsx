@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { User, Home, DollarSign, FileText, Upload, CheckCircle, ArrowLeft, ArrowRight } from 'lucide-react';
+import { User, Home, DollarSign, FileText, Upload, CheckCircle, ArrowLeft, ArrowRight, Phone, Mail } from 'lucide-react';
 
 const Application = () => {
   const [currentStep, setCurrentStep] = useState(1);
