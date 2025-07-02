@@ -15,7 +15,7 @@ const Properties = () => {
   const properties = [
     {
       id: 1,
-      image: '/src/assets/Volusia.jpg',
+      image: '/assets/Volusia.jpg',
       title: 'Volusia Street Community',
       location: 'South Wichita',
       bedrooms: 2,
@@ -30,7 +30,7 @@ const Properties = () => {
     },
     {
       id: 2,
-      image: '/src/assets/Ida.jpg',
+      image: '/assets/Ida.jpg',
       title: 'Ida Avenue Homes',
       location: 'Historic District',
       bedrooms: 3,
@@ -45,7 +45,7 @@ const Properties = () => {
     },
     {
       id: 3,
-      image: '/src/assets/Hydraulic1.webp',
+      image: '/assets/Hydraulic1.webp',
       title: 'The Sharon in The Douglas Design District',
       location: 'Hydraulic Avenue, Central Wichita',
       bedrooms: 1,
@@ -61,7 +61,7 @@ const Properties = () => {
     },
     {
       id: 4,
-      image: '/src/assets/Hydraulic2.webp',
+      image: '/assets/Hydraulic2.webp',
       title: 'Hydraulic Commons',
       location: 'Central Wichita',
       bedrooms: 2,

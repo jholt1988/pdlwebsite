@@ -77,7 +77,7 @@ const RetroHome = () => {
   const properties = [
     {
       id: 1,
-      image: '/src/assets/Hydraulic1.webp',
+      image: '/assets/Hydraulic1.webp',
       title: 'The Sharon',
       subtitle: 'Douglas Design District',
       description: 'A masterpiece of vintage architecture restored to modern perfection in Wichita\'s vibrant arts district.',
@@ -87,7 +87,7 @@ const RetroHome = () => {
     },
     {
       id: 2,
-      image: '/src/assets/Volusia.jpg',
+      image: '/assets/Volusia.jpg',
       title: 'Volusia Commons',
       subtitle: 'South Wichita',
       description: 'Charming homes in a peaceful neighborhood setting with modern updates and community amenities.',
@@ -96,7 +96,7 @@ const RetroHome = () => {
     },
     {
       id: 3,
-      image: '/src/assets/Ida.jpg',
+      image: '/assets/Ida.jpg',
       title: 'Ida Heritage',
       subtitle: 'Historic District',
       description: 'Beautiful historic homes with original character and thoughtful modern improvements.',
@@ -177,7 +177,7 @@ const RetroHome = () => {
           <div 
             className="hero-video"
             style={{
-              backgroundImage: `url('/src/assets/Hydraulic2.webp')`,
+              backgroundImage: `url('/assets/Hydraulic2.webp')`,
               backgroundSize: 'cover',
               backgroundPosition: 'center',
               filter: 'sepia(20%) contrast(1.1) brightness(0.9)'

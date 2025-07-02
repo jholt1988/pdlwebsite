@@ -31,7 +31,7 @@ const Header = () => {
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-r from-primary-500 to-accent-500 rounded-xl blur opacity-30 group-hover:opacity-50 transition-opacity"></div>
               <img 
-                src="/src/assets/Minimalist Keyhole Logo Design.png" 
+                src="/assets/Minimalist Keyhole Logo Design.png" 
                 alt="PDL Rentals Logo" 
                 className="relative h-12 w-auto"
               />

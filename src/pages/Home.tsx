@@ -13,7 +13,7 @@ const Home = () => {
   const featuredProperties = [
     {
       id: 1,
-      image: '/src/assets/Volusia.jpg',
+      image: '/assets/Volusia.jpg',
       title: 'Volusia Street Community',
       location: 'South Wichita',
       bedrooms: 2,
@@ -25,7 +25,7 @@ const Home = () => {
     },
     {
       id: 2,
-      image: '/src/assets/Ida.jpg',
+      image: '/assets/Ida.jpg',
       title: 'Ida Avenue Homes',
       location: 'Historic District',
       bedrooms: 3,
@@ -37,7 +37,7 @@ const Home = () => {
     },
     {
       id: 3,
-      image: '/src/assets/Hydraulic1.webp',
+      image: '/assets/Hydraulic1.webp',
       title: 'The Sharon in The Douglas Design District',
       location: 'Hydraulic Avenue, Central Wichita',
       bedrooms: 1,
@@ -187,7 +187,7 @@ const Home = () => {
                 <div className="relative">
                   <div className="absolute inset-0 bg-gradient-to-r from-accent-500/20 to-secondary-500/20 rounded-2xl blur-xl"></div>
                   <img
-                    src="/src/assets/Hydraulic2.webp"
+                    src="/assets/Hydraulic2.webp"
                     alt="PDL Rentals community homes in Wichita"
                     className="relative rounded-2xl shadow-modern-lg"
                     width={934} height={800}
