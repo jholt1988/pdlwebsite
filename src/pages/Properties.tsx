@@ -121,7 +121,7 @@ const Properties = () => {
     },
     {
       id: 8,
-      image: 'https://images.pexels.com/photos/1396119/pexels-photo-1396119.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image: '/assets/lincoln.webp',
       title: '525 E Lincoln',
       location: 'Central Wichita',
       bedrooms: 2,
