@@ -136,7 +136,7 @@ We are unwavering in our commitment to being a positive force within the South S
 At PDL, we extend familial regard to our residents, dedicated to furnishing a secure, comfortable, and hospitable dwelling. We comprehend the significance of identifying appropriate living accommodations, which is why we proffer a diverse selection of floor plans and amenities tailored to accommodate varying needs and fiscal parameters. We are confident that prospective residents will discover their ideal abode with us.
 </p>
 
-                </p>
+                
  
 
 
