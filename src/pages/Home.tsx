@@ -189,7 +189,8 @@ const Home = () => {
                   <img
                     src="/src/assets/Hydraulic2.webp"
                     alt="PDL Rentals community homes in Wichita"
-                    className="relative rounded-2xl shadow-modern-lg width-60 height-60"
+                    className="relative rounded-2xl shadow-modern-lg"
+                    width={934} height={800}
                     
                   />
                 </div>
