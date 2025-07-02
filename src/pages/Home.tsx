@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Search, MapPin, BedSingle, Bath, Square, Star, ArrowRight, Shield, Users, Award, TrendingUp, Leaf, Heart, Home as HomeIcon, ExternalLink } from 'lucide-react';
+import WelcomeVideoOverlay from '../components/WelcomeVideoOverlay';
 
 const Home = () => {
   const [searchFilters, setSearchFilters] = useState({
@@ -9,6 +10,8 @@ const Home = () => {
     maxPrice: '',
     bedrooms: '',
   });
+
+  const [showWelcomeVideo, setShowWelcomeVideo] = useState(true);
 
   const featuredProperties = [
     {
@@ -145,6 +148,24 @@ const Home = () => {
 
   return (
     <div className="space-y-0">
+      {/* Welcome Video Overlay */}
+      {showWelcomeVideo && (
+        <WelcomeVideoOverlay
+          videoSrc="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+          posterSrc="/assets/Hydraulic2.webp"
+          captionsSrc="/captions/welcome-video-en.vtt"
+          videoTitle="Welcome to PDL Rentals"
+          videoDescription="Discover quality affordable housing communities in Wichita and Augusta, Kansas. Learn about our family-owned property management services and find your fresh start with PDL Rentals."
+          maxWidth="85%"
+          autoCloseOnEnd={true}
+          showProgress={true}
+          captionsEnabled={false}
+          onClose={() => setShowWelcomeVideo(false)}
+          onPlay={() => console.log('Welcome video started playing')}
+          onEnd={() => console.log('Welcome video ended')}
+        />
+      )}
+
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-primary-900 via-primary-800 to-accent-900 text-white overflow-hidden">
         <>
