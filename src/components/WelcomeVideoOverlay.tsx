@@ -20,7 +20,7 @@ const DEFAULT_ACCESSIBILITY_CONFIG: AccessibilityConfig = {
 };
 
 const WelcomeVideoOverlay: React.FC<VideoOverlayProps> = ({
-  videoSrc = "/home/project/public/videos/20250702_0556_Sunset Family Connection_remix_01jz5cfr5eft19x4m46f00jkjc.mp4",
+  videoSrc,
   captionsSrc,
   videoTitle,
   videoDescription,
