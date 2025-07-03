@@ -403,6 +403,8 @@ const Home = () => {
                 )}
                 <div className="relative overflow-hidden">
                   <img
+                   srcSet= "384×288, 800×600, 984×738, 1152×864, 1420×1065"
+
                     src={property.image}
                     alt={property.title}
                     className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
