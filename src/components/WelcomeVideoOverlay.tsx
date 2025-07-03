@@ -21,6 +21,7 @@ const DEFAULT_ACCESSIBILITY_CONFIG: AccessibilityConfig = {
 
 const WelcomeVideoOverlay: React.FC<VideoOverlayProps> = ({
   videoSrc,
+  posterSrc,
   captionsSrc,
   videoTitle,
   videoDescription,
