@@ -151,7 +151,7 @@ const Home = () => {
       {/* Welcome Video Overlay */}
       {showWelcomeVideo && (
         <WelcomeVideoOverlay
-          videoSrc="public/videos/20250702_0556_Sunset Family Connection_remix_01jz5cfr5eft19x4m46f00jkjc.mp4"
+          videoSrc="/public/videos/20250702_0556_Sunset Family Connection_remix_01jz5cfr5eft19x4m46f00jkjc.mp4"
           posterSrc="/assets/Hydraulic2.webp"
           captionsSrc="/captions/welcome-video-en.vtt"
           videoTitle="Welcome to PDL Rentals"
