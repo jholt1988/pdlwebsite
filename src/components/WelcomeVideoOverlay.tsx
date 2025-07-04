@@ -435,7 +435,7 @@ const WelcomeVideoOverlay: React.FC<VideoOverlayProps> = ({
           preload="metadata"
           aria-label={videoTitle}
           aria-describedby="video-description"
-        >{console.log(videoSrc)}
+        >
           {/* Captions track */}
           {captionsSrc && (
             <track
