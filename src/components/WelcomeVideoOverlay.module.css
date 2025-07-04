@@ -59,6 +59,8 @@
   display: block;
   border-radius: 12px;
   background: #000;
+  object-fit: cointain;
+  object-position: center;
 }
 
 /* Loading state */
