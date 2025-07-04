@@ -133,3 +133,41 @@ export function getPreferredLanguage(): string {
   
   return navigator.language.split('-')[0] || 'en';
 }
+
+/**
+ * Debug utilities for testing
+ */
+export function getVisitDebugInfo(config: Partial<VisitTrackingConfig> = {}): object {
+  const mergedConfig = { ...DEFAULT_CONFIG, ...config };
+  
+  try {
+    const info = {
+      isFirstTime: isFirstTimeVisitor(config),
+      localStorage: null as any,
+      sessionStorage: null as any,
+      timestamp: new Date().getTime()
+    };
+    
+    if (typeof window !== 'undefined') {
+      if (window.localStorage) {
+        const stored = localStorage.getItem(mergedConfig.storageKey);
+        info.localStorage = stored ? JSON.parse(stored) : null;
+      }
+      if (window.sessionStorage) {
+        info.sessionStorage = sessionStorage.getItem(mergedConfig.storageKey + '_session');
+      }
+    }
+    
+    return info;
+  } catch (error) {
+    return { error: error instanceof Error ? error.message : 'Unknown error' };
+  }
+}
+
+/**
+ * Force reset for testing - makes it appear as first visit
+ */
+export function forceFirstTimeVisit(config: Partial<VisitTrackingConfig> = {}): void {
+  clearVisitData(config);
+  console.log('Visit data cleared - will show as first time visitor on next check');
+}

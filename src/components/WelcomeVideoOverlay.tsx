@@ -142,10 +142,12 @@ const WelcomeVideoOverlay: React.FC<VideoOverlayProps> = ({
    * Handle video loading states
    */
   const handleLoadStart = useCallback(() => {
+    console.log('WelcomeVideoOverlay: Video load start');
     setVideoState(prev => ({ ...prev, isLoading: true }));
   }, []);
 
   const handleCanPlay = useCallback(() => {
+    console.log('WelcomeVideoOverlay: Video can play');
     setVideoState(prev => ({ ...prev, isLoading: false }));
     announceToScreenReader('Video is ready to play');
   }, [announceToScreenReader]);
@@ -187,14 +189,23 @@ const WelcomeVideoOverlay: React.FC<VideoOverlayProps> = ({
    */
   const togglePlayPause = useCallback(() => {
     const video = videoRef.current;
-    if (!video) return;
+    if (!video) {
+      console.log('WelcomeVideoOverlay: No video element found');
+      return;
+    }
+
+    console.log('WelcomeVideoOverlay: Toggle play/pause - current paused state:', video.paused);
+    console.log('WelcomeVideoOverlay: Video src:', video.src);
+    console.log('WelcomeVideoOverlay: Video readyState:', video.readyState);
 
     if (video.paused) {
+      console.log('WelcomeVideoOverlay: Attempting to play video...');
       video.play().catch(error => {
-        console.warn('Video play failed:', error);
+        console.error('WelcomeVideoOverlay: Video play failed:', error);
         announceToScreenReader('Unable to play video');
       });
     } else {
+      console.log('WelcomeVideoOverlay: Pausing video...');
       video.pause();
     }
   }, [announceToScreenReader]);
@@ -306,8 +317,15 @@ const WelcomeVideoOverlay: React.FC<VideoOverlayProps> = ({
    * Initialize overlay on mount
    */
   useEffect(() => {
+    // Debug logging
+    console.log('WelcomeVideoOverlay: Checking first time visitor status...');
+    const isFirstTime = isFirstTimeVisitor();
+    console.log('WelcomeVideoOverlay: Is first time visitor?', isFirstTime);
+    
     // Check if user is visiting for the first time
-    if (isFirstTimeVisitor()) {
+    if (isFirstTime) {
+      console.log('WelcomeVideoOverlay: Showing overlay for first time visitor');
+      
       // Store currently focused element
       lastFocusedElementRef.current = document.activeElement as HTMLElement;
       
@@ -325,6 +343,8 @@ const WelcomeVideoOverlay: React.FC<VideoOverlayProps> = ({
       }, 500);
 
       announceToScreenReader('Welcome video overlay opened. Press Escape to close or Tab to navigate controls.');
+    } else {
+      console.log('WelcomeVideoOverlay: Not showing overlay - not a first time visitor');
     }
 
     // Cleanup on unmount
@@ -340,7 +360,28 @@ const WelcomeVideoOverlay: React.FC<VideoOverlayProps> = ({
    */
   useEffect(() => {
     const video = videoRef.current;
-    if (!video) return;
+    if (!video) {
+      console.log('WelcomeVideoOverlay: No video element found for event listeners');
+      return;
+    }
+
+    console.log('WelcomeVideoOverlay: Setting up video event listeners');
+    console.log('WelcomeVideoOverlay: Video element src:', video.src);
+
+    const handleError = (e: Event) => {
+      console.error('WelcomeVideoOverlay: Video error:', e);
+      const videoElement = e.target as HTMLVideoElement;
+      if (videoElement && videoElement.error) {
+        console.error('WelcomeVideoOverlay: Video error details:', {
+          code: videoElement.error.code,
+          message: videoElement.error.message
+        });
+      }
+    };
+
+    const handleLoadError = () => {
+      console.error('WelcomeVideoOverlay: Failed to load video');
+    };
 
     video.addEventListener('loadstart', handleLoadStart);
     video.addEventListener('canplay', handleCanPlay);
@@ -348,6 +389,8 @@ const WelcomeVideoOverlay: React.FC<VideoOverlayProps> = ({
     video.addEventListener('pause', handlePause);
     video.addEventListener('ended', handleEnded);
     video.addEventListener('timeupdate', handleTimeUpdate);
+    video.addEventListener('error', handleError);
+    video.addEventListener('loadstart', handleLoadError);
 
     return () => {
       video.removeEventListener('loadstart', handleLoadStart);
@@ -356,6 +399,8 @@ const WelcomeVideoOverlay: React.FC<VideoOverlayProps> = ({
       video.removeEventListener('pause', handlePause);
       video.removeEventListener('ended', handleEnded);
       video.removeEventListener('timeupdate', handleTimeUpdate);
+      video.removeEventListener('error', handleError);
+      video.removeEventListener('loadstart', handleLoadError);
     };
   }, [handleLoadStart, handleCanPlay, handlePlay, handlePause, handleEnded, handleTimeUpdate]);
 
