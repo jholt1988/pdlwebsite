@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Search, MapPin, BedSingle, Bath, Square, Star, ArrowRight, Shield, Users, Award, TrendingUp, Leaf, Heart, Home as HomeIcon, ExternalLink } from 'lucide-react';
 import WelcomeVideoOverlay from '../components/WelcomeVideoOverlay';
-import VideoDebugHelper from '../components/VideoDebugHelper';
 
 const Home = () => {
   const [searchFilters, setSearchFilters] = useState({
@@ -13,9 +12,6 @@ const Home = () => {
   });
 
   const [showWelcomeVideo, setShowWelcomeVideo] = useState(true);
-
-  // Force show video for debugging - remove this in production
-  const [forceShowVideo, setForceShowVideo] = useState(true);
 
   const featuredProperties = [
     {
@@ -152,11 +148,8 @@ const Home = () => {
 
   return (
     <div className="space-y-0">
-      {/* Debug Helper - Remove in production */}
-      <VideoDebugHelper />
-      
       {/* Welcome Video Overlay */}
-      {(showWelcomeVideo || forceShowVideo) && (
+      {showWelcomeVideo && (
         <WelcomeVideoOverlay
           videoSrc="/assets/videos/welcome-video-2.mp4"
           posterSrc="/assets/Hydraulic2.webp"
@@ -167,7 +160,6 @@ const Home = () => {
           autoCloseOnEnd={true}
           showProgress={true}
           captionsEnabled={false}
-          forceShow={forceShowVideo} // Use forceShow for debugging
           onClose={() => setShowWelcomeVideo(false)}
           onPlay={() => console.log('Welcome video started playing')}
           onEnd={() => console.log('Welcome video ended')}
