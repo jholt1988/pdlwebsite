@@ -167,6 +167,7 @@ const Home = () => {
           autoCloseOnEnd={true}
           showProgress={true}
           captionsEnabled={false}
+          forceShow={forceShowVideo} // Use forceShow for debugging
           onClose={() => setShowWelcomeVideo(false)}
           onPlay={() => console.log('Welcome video started playing')}
           onEnd={() => console.log('Welcome video ended')}

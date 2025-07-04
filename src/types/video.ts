@@ -22,6 +22,8 @@ export interface VideoOverlayProps {
   showProgress?: boolean;
   /** Enable captions by default (default: false) */
   captionsEnabled?: boolean;
+  /** Force show video regardless of first-time visitor status (for debugging) */
+  forceShow?: boolean;
   /** Callback when overlay is closed */
   onClose?: () => void;
   /** Callback when video starts playing */

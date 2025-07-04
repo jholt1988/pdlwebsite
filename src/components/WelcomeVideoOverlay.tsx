@@ -31,7 +31,8 @@ const WelcomeVideoOverlay: React.FC<VideoOverlayProps> = ({
   captionsEnabled = false,
   onClose,
   onPlay,
-  onEnd
+  onEnd,
+  forceShow = false // Add debug prop
 }) => {
   // Refs for DOM elements
   const overlayRef = useRef<HTMLDivElement>(null);
@@ -321,10 +322,11 @@ const WelcomeVideoOverlay: React.FC<VideoOverlayProps> = ({
     console.log('WelcomeVideoOverlay: Checking first time visitor status...');
     const isFirstTime = isFirstTimeVisitor();
     console.log('WelcomeVideoOverlay: Is first time visitor?', isFirstTime);
+    console.log('WelcomeVideoOverlay: Force show?', forceShow);
     
-    // Check if user is visiting for the first time
-    if (isFirstTime) {
-      console.log('WelcomeVideoOverlay: Showing overlay for first time visitor');
+    // Check if user is visiting for the first time OR forceShow is true
+    if (isFirstTime || forceShow) {
+      console.log('WelcomeVideoOverlay: Showing overlay for first time visitor or forced show');
       
       // Store currently focused element
       lastFocusedElementRef.current = document.activeElement as HTMLElement;
@@ -344,7 +346,7 @@ const WelcomeVideoOverlay: React.FC<VideoOverlayProps> = ({
 
       announceToScreenReader('Welcome video overlay opened. Press Escape to close or Tab to navigate controls.');
     } else {
-      console.log('WelcomeVideoOverlay: Not showing overlay - not a first time visitor');
+      console.log('WelcomeVideoOverlay: Not showing overlay - not a first time visitor and forceShow is false');
     }
 
     // Cleanup on unmount
@@ -353,15 +355,18 @@ const WelcomeVideoOverlay: React.FC<VideoOverlayProps> = ({
       window.removeEventListener('focus', handleWindowFocus);
       window.removeEventListener('blur', handleWindowBlur);
     };
-  }, [handleKeyDown, handleWindowFocus, handleWindowBlur, announceToScreenReader]);
+  }, [handleKeyDown, handleWindowFocus, handleWindowBlur, announceToScreenReader, forceShow]);
 
   /**
-   * Setup video event listeners
+   * Setup video event listeners when video becomes available
    */
   useEffect(() => {
+    // Only set up video event listeners if the overlay is visible
+    if (!isVisible) return;
+    
     const video = videoRef.current;
     if (!video) {
-      console.log('WelcomeVideoOverlay: No video element found for event listeners');
+      console.log('WelcomeVideoOverlay: No video element found for event listeners - overlay is visible but video ref not ready');
       return;
     }
 
@@ -402,7 +407,7 @@ const WelcomeVideoOverlay: React.FC<VideoOverlayProps> = ({
       video.removeEventListener('error', handleError);
       video.removeEventListener('loadstart', handleLoadError);
     };
-  }, [handleLoadStart, handleCanPlay, handlePlay, handlePause, handleEnded, handleTimeUpdate]);
+  }, [isVisible, handleLoadStart, handleCanPlay, handlePlay, handlePause, handleEnded, handleTimeUpdate]);
 
   // Don't render if not visible
   if (!isVisible) return null;
