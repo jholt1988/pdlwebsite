@@ -15,7 +15,7 @@ const Properties = () => {
   const properties = [
     {
       id: 1,
-      image: '/assets/Volusia.jpg',
+      image: '/assets/Volusia.jpeg',
       title: 'Volusia Street Community',
       location: 'South Wichita',
       bedrooms: 2,
@@ -30,7 +30,7 @@ const Properties = () => {
     },
     {
       id: 2,
-      image: '/assets/Ida.jpg',
+      image: '/assets/Ida.jpeg',
       title: 'Ida Avenue Homes',
       location: 'Historic District',
       bedrooms: 3,
@@ -45,7 +45,7 @@ const Properties = () => {
     },
     {
       id: 3,
-      image: '/assets/Hydraulic1.webp',
+      image: '/assets/Hydraulic1.jpeg',
       title: 'The Sharon in The Douglas Design District',
       location: 'Hydraulic Avenue, Central Wichita',
       bedrooms: 1,
@@ -61,7 +61,7 @@ const Properties = () => {
     },
     {
       id: 4,
-      image: '/assets/Hydraulic2.webp',
+      image: '/assets/Hydraulic2.jpeg',
       title: 'Hydraulic Commons',
       location: 'Central Wichita',
       bedrooms: 2,
@@ -76,7 +76,7 @@ const Properties = () => {
     },
     {
       id: 5,
-      image: 'https://images.pexels.com/photos/1396122/pexels-photo-1396122.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image: '/assets/1807_West_Maple.jpeg',
       title: '1807 West Maple',
       location: 'West Wichita',
       bedrooms: 3,
@@ -91,7 +91,7 @@ const Properties = () => {
     },
     {
       id: 6,
-      image: 'https://images.pexels.com/photos/1396132/pexels-photo-1396132.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image: '/assets/2946_Bunkerhill.jpeg',
       title: '2946 Bunkerhill',
       location: 'Northeast Wichita',
       bedrooms: 2,
@@ -106,7 +106,7 @@ const Properties = () => {
     },
     {
       id: 7,
-      image: 'https://images.pexels.com/photos/1396125/pexels-photo-1396125.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image: '/assets/2948_Bunkerhill.jpeg',
       title: '2948 Bunkerhill',
       location: 'Northeast Wichita',
       bedrooms: 2,
@@ -121,7 +121,7 @@ const Properties = () => {
     },
     {
       id: 8,
-      image: '/assets/lincoln.webp',
+      image: '/assets/lincoln.jpeg',
       title: '525 E Lincoln',
       location: 'Central Wichita',
       bedrooms: 2,
@@ -136,7 +136,7 @@ const Properties = () => {
     },
     {
       id: 9,
-      image: 'https://images.pexels.com/photos/1396117/pexels-photo-1396117.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image: '/assets/1204_S_Emporia.jpeg',
       title: '1204 S. Emporia',
       location: 'South Wichita',
       bedrooms: 3,
@@ -151,7 +151,7 @@ const Properties = () => {
     },
     {
       id: 10,
-      image: 'https://images.pexels.com/photos/1396127/pexels-photo-1396127.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image: '/assets/1952_Jackson.jpg',
       title: '1952 Jackson',
       location: 'Riverside',
       bedrooms: 2,
@@ -166,7 +166,7 @@ const Properties = () => {
     },
     {
       id: 11,
-      image: 'https://images.pexels.com/photos/1396130/pexels-photo-1396130.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image: '/assets/1954_Jackson.jpg',
       title: '1954 Jackson',
       location: 'Riverside',
       bedrooms: 2,
@@ -181,7 +181,7 @@ const Properties = () => {
     },
     {
       id: 12,
-      image: 'https://images.pexels.com/photos/1396134/pexels-photo-1396134.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image: '/assets/2053_N_Market.jpeg',
       title: '2053 N Market',
       location: 'North Wichita',
       bedrooms: 3,
@@ -196,7 +196,7 @@ const Properties = () => {
     },
     {
       id: 13,
-      image: 'https://images.pexels.com/photos/1396123/pexels-photo-1396123.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image: '/assets/topeka.jpg',
       title: '2042 S. Topeka',
       location: 'South Wichita',
       bedrooms: 2,
@@ -211,7 +211,7 @@ const Properties = () => {
     },
     {
       id: 14,
-      image: 'https://images.pexels.com/photos/1396128/pexels-photo-1396128.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image: '/assets/topeka.jpg',
       title: '2044 S. Topeka',
       location: 'South Wichita',
       bedrooms: 2,
@@ -241,7 +241,7 @@ const Properties = () => {
     },
     {
       id: 16,
-      image: 'https://images.pexels.com/photos/1396126/pexels-photo-1396126.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image: '/assets/augusta.jpg',
       title: '231 E 12th',
       location: 'Augusta, KS',
       bedrooms: 2,

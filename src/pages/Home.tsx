@@ -161,8 +161,8 @@ const Home = () => {
           showProgress={true}
           captionsEnabled={false}
           onClose={() => setShowWelcomeVideo(false)}
-          onPlay={() => console.log('Welcome video started playing')}
-          onEnd={() => console.log('Welcome video ended')}
+          onPlay={() => {}}
+          onEnd={() => {}}
         />
       )}
 
