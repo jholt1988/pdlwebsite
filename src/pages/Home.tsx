@@ -40,7 +40,7 @@ const Home = () => {
     },
     {
       id: 3,
-      image: '/assets/Hydraulic2.jpeg',
+      image: '/assets/Hydraulic2.jpg',
       title: 'The Sharon in The Douglas Design District',
       location: 'Hydraulic Avenue, Central Wichita',
       bedrooms: 1,
@@ -53,7 +53,7 @@ const Home = () => {
     },
     {
       id: 4,
-      image: '1807_Maple.jpeg',
+      image: '/assets/1807_Maple.jpg',
       title: '1807 West Maple',
       location: 'West Wichita',
       bedrooms: 3,
@@ -77,7 +77,7 @@ const Home = () => {
     },
     {
       id: 6,
-      image: 'https://images.pexels.com/photos/1396126/pexels-photo-1396126.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image: '/assets/augusta.jpg',
       title: '231 E 12th Augusta',
       location: 'Augusta, KS',
       bedrooms: 2,
