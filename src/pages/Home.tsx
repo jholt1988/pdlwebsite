@@ -151,7 +151,7 @@ const Home = () => {
       {/* Welcome Video Overlay */}
       {showWelcomeVideo && (
         <WelcomeVideoOverlay
-          videoSrc="/videos/welcome-video.mp4"
+          videoSrc="/assets/videos/welcome-video.mp4"
           posterSrc="/assets/Hydraulic2.webp"
           captionsSrc="/captions/welcome-video-en.vtt"
           videoTitle="Welcome to PDL Rentals"
