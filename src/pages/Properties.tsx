@@ -76,7 +76,7 @@ const Properties = () => {
     },
     {
       id: 5,
-      image: '/assets/1807_West_Maple.jpeg',
+      image: '/assets/1807_Maple.jpeg',
       title: '1807 West Maple',
       location: 'West Wichita',
       bedrooms: 3,
@@ -91,7 +91,7 @@ const Properties = () => {
     },
     {
       id: 6,
-      image: '/assets/2946_Bunkerhill.jpeg',
+      image: '/assets/bunkerhill.jpeg',
       title: '2946 Bunkerhill',
       location: 'Northeast Wichita',
       bedrooms: 2,
@@ -106,7 +106,7 @@ const Properties = () => {
     },
     {
       id: 7,
-      image: '/assets/2948_Bunkerhill.jpeg',
+      image: '/assets/bunkerhill.jpeg',
       title: '2948 Bunkerhill',
       location: 'Northeast Wichita',
       bedrooms: 2,

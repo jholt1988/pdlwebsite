@@ -16,7 +16,7 @@ const Home = () => {
   const featuredProperties = [
     {
       id: 1,
-      image: '/assets/Volusia.jpg',
+      image: '/assets/Volusia.jpeg',
       title: 'Volusia Street Community',
       location: 'South Wichita',
       bedrooms: 2,
@@ -28,7 +28,7 @@ const Home = () => {
     },
     {
       id: 2,
-      image: '/assets/Ida.jpg',
+      image: '/assets/Ida.jpeg',
       title: 'Ida Avenue Homes',
       location: 'Historic District',
       bedrooms: 3,
@@ -40,7 +40,7 @@ const Home = () => {
     },
     {
       id: 3,
-      image: '/assets/Hydraulic1.webp',
+      image: '/assets/Hydraulic2.jpeg',
       title: 'The Sharon in The Douglas Design District',
       location: 'Hydraulic Avenue, Central Wichita',
       bedrooms: 1,
@@ -53,7 +53,7 @@ const Home = () => {
     },
     {
       id: 4,
-      image: 'https://images.pexels.com/photos/1396122/pexels-photo-1396122.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image: '1807_Maple.jpeg',
       title: '1807 West Maple',
       location: 'West Wichita',
       bedrooms: 3,
@@ -65,7 +65,7 @@ const Home = () => {
     },
     {
       id: 5,
-      image: 'https://images.pexels.com/photos/1396132/pexels-photo-1396132.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image: 'bunkerhill.jpeg',
       title: 'Bunkerhill Residences',
       location: 'Northeast Wichita',
       bedrooms: 2,
