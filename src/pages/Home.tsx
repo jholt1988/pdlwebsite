@@ -208,7 +208,7 @@ const Home = () => {
                 <div className="relative">
                   <div className="absolute inset-0 bg-gradient-to-r from-accent-500/20 to-secondary-500/20 rounded-2xl blur-xl"></div>
                   <img
-                    src="/assets/Hydraulic2.webp"
+                    src="/assets/Hydraulic2.jpeg"
                     alt="PDL Rentals community homes in Wichita"
                     className="relative rounded-2xl shadow-modern-lg"
                     width={934} height={800}

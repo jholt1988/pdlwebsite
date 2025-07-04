@@ -136,7 +136,7 @@ const Properties = () => {
     },
     {
       id: 9,
-      image: '/assets/1204_S_Emporia.jpeg',
+      image: '/assets/Emporia.jpg',
       title: '1204 S. Emporia',
       location: 'South Wichita',
       bedrooms: 3,
@@ -151,7 +151,7 @@ const Properties = () => {
     },
     {
       id: 10,
-      image: '/assets/1952_Jackson.jpg',
+      image: '/assets/jackson.jpg',
       title: '1952 Jackson',
       location: 'Riverside',
       bedrooms: 2,
@@ -166,7 +166,7 @@ const Properties = () => {
     },
     {
       id: 11,
-      image: '/assets/1954_Jackson.jpg',
+      image: '/assets/jackson.jpg',
       title: '1954 Jackson',
       location: 'Riverside',
       bedrooms: 2,
@@ -181,7 +181,7 @@ const Properties = () => {
     },
     {
       id: 12,
-      image: '/assets/2053_N_Market.jpeg',
+      image: '/assets/market.jpg',
       title: '2053 N Market',
       location: 'North Wichita',
       bedrooms: 3,
