@@ -432,7 +432,7 @@ const WelcomeVideoOverlay: React.FC<VideoOverlayProps> = ({
           muted={videoState.isMuted}
           autoPlay
           playsInline
-          preload="auto"
+          preload="metadata"
           aria-label={videoTitle}
           aria-describedby="video-description"
         >{console.log(videoSrc)}
