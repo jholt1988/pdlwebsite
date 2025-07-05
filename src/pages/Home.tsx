@@ -152,7 +152,7 @@ const Home = () => {
       {showWelcomeVideo && (
         <WelcomeVideoOverlay
           videoSrc="/assets/videos/welcome-video-2.mp4"
-          posterSrc="/assets/Hydraulic2.webp"
+          posterSrc="/assets/Hydraulic2.jpeg"
           captionsSrc="/captions/welcome-video-en.vtt"
           videoTitle="Welcome to PDL Rentals"
           videoDescription="Discover quality affordable housing communities in Wichita and Augusta, Kansas. Learn about our family-owned property management services and find your fresh start with PDL Rentals."
@@ -403,8 +403,6 @@ const Home = () => {
                 )}
                 <div className="relative overflow-hidden">
                   <img
-                   srcSet= "384×288, 800×600, 984×738, 1152×864, 1420×1065"
-
                     src={property.image}
                     alt={property.title}
                     className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
