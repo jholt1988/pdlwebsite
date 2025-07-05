@@ -7,7 +7,7 @@ const About = () => {
       name: 'Paul LaBrue Jr.',
       title: 'Founder & CEO',
       image: 'https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=400',
-      bio: 'With over 15 years in affordable housing development, Paul founded PDL Rentals with a mission to create quality communities that enhance residents\' lives while remaining accessible to working families. His extensive background, including over 30 years as an Insurance Adjuster helping people through vulnerable times, informs his dedicated approach to affordable housing.",
+      bio: 'With over 15 years in affordable housing development, Paul founded PDL Rentals with a mission to create quality communities that enhance residents\' lives while remaining accessible to working families. His extensive background, including over 30 years as an Insurance Adjuster helping people through vulnerable times, informs his dedicated approach to affordable housing.',
     },
     {
       name: 'Anthony Reyna',
