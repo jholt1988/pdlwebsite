@@ -40,7 +40,7 @@ const Home = () => {
     },
     {
       id: 3,
-      image: '/assets/Hydraulic2.jpg',
+      image: '/assets/Hydraulic2.jpeg',
       title: 'The Sharon in The Douglas Design District',
       location: 'Hydraulic Avenue, Central Wichita',
       bedrooms: 1,
@@ -53,7 +53,7 @@ const Home = () => {
     },
     {
       id: 4,
-      image: '/assets/1807_Maple.jpg',
+      image: '/assets/1807_Maple.jpeg',
       title: '1807 West Maple',
       location: 'West Wichita',
       bedrooms: 3,
