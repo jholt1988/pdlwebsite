@@ -77,7 +77,7 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-center space-x-2 group">
                 <Phone className="h-4 w-4 text-accent-400 group-hover:text-accent-300 transition-colors" />
-                <span className="text-neutral-200 group-hover:text-white transition-colors">(555) 123-4567</span>
+                <span className="text-neutral-200 group-hover:text-white transition-colors">(316) 350-4020</span>
               </div>
               <div className="flex items-center space-x-2 group">
                 <Phone className="h-4 w-4 text-accent-400 group-hover:text-accent-300 transition-colors" />
@@ -91,9 +91,8 @@ const Footer = () => {
               <div className="flex items-start space-x-2 group">
                 <MapPin className="h-4 w-4 text-accent-400 group-hover:text-accent-300 transition-colors mt-1" />
                 <span className="text-neutral-200 group-hover:text-white transition-colors">
-                  123 Main Street<br />
-                  Suite 100<br />
-                  Your City, ST 12345
+                  1531 N. Sheridan<br />
+                  Wichita, KS 67213
                 </span>
               </div>
             </div>
