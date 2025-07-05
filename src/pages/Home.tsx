@@ -65,7 +65,7 @@ const Home = () => {
     },
     {
       id: 5,
-      image: 'bunkerhill.jpeg',
+      image: '/assets/bunkerhill.jpeg',
       title: 'Bunkerhill Residences',
       location: 'Northeast Wichita',
       bedrooms: 2,
