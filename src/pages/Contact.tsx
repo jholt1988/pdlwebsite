@@ -117,7 +117,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900 mb-1">Phone</h3>
-                    <p className="text-gray-600">(555) 123-4567</p>
+                    <p className="text-gray-600">(316) 350-4020</p>
                     <p className="text-sm text-gray-500">Main Office</p>
                   </div>
                 </div>
@@ -151,9 +151,8 @@ const Contact = () => {
                   <div>
                     <h3 className="font-semibold text-gray-900 mb-1">Office</h3>
                     <p className="text-gray-600">
-                      123 Main Street<br />
-                      Suite 100<br />
-                      Your City, ST 12345
+                     1531 N. Sheridan<br />
+                      Wichita, KS 67212
                     </p>
                   </div>
                 </div>
@@ -165,8 +164,8 @@ const Contact = () => {
                   <div>
                     <h3 className="font-semibold text-gray-900 mb-1">Business Hours</h3>
                     <div className="text-gray-600 space-y-1">
-                      <p>Monday - Friday: 8:00 AM - 6:00 PM</p>
-                      <p>Saturday: 9:00 AM - 4:00 PM</p>
+                      <p>Monday - Friday: By Appointment Only</p>
+                      <p>Saturday: By Appointment Only</p>
                       <p>Sunday: Closed</p>
                     </div>
                   </div>
