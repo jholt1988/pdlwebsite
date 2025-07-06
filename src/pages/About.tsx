@@ -15,18 +15,18 @@ const About = () => {
       image: '/assets/AnthonyProfile.png',
       bio: "Anthony Reyna brings a unique blend of analytical prowess and innovative vision to his role as Chief Strategy Officer at PDL Rentals. With a foundation built on years as a skilled Insurance Adjuster, Anthony developed a keen ability to navigate complex situations and understand diverse needs. Beyond his professional background, Anthony is widely recognized for his exceptional intellect and broad knowledge base, often demonstrating a remarkable aptitude for complex systems and a passion for pioneering new frontiers. This combination of deep analytical thinking, a commitment to understanding human needs, and a forward-thinking, inventive spirit directly informs his strategic approach to enhancing resident experiences and driving leading-edge solutions within the residential rental property sector.",
     },
-    {
-      name: 'Sarah Rodriguez',
-      title: 'Resident Services Manager',
-      image: 'https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=400',
-      bio: 'Sarah leads our resident services team, connecting families with resources and ensuring every resident feels welcomed and supported in their community.',
-    },
-    {
-      name: 'Michael Johnson',
-      title: 'Facilities & Maintenance Supervisor',
-      image: 'https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?auto=compress&cs=tinysrgb&w=400',
-      bio: 'Michael oversees our maintenance operations with a focus on rapid response and preventive care, ensuring residents enjoy comfortable, well-maintained homes.',
-    },
+    // {
+    //   name: 'Sarah Rodriguez',
+    //   title: 'Resident Services Manager',
+    //   image: 'https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=400',
+    //   bio: 'Sarah leads our resident services team, connecting families with resources and ensuring every resident feels welcomed and supported in their community.',
+    // },
+    // {
+    //   name: 'Michael Johnson',
+    //   title: 'Facilities & Maintenance Supervisor',
+    //   image: 'https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?auto=compress&cs=tinysrgb&w=400',
+    //   bio: 'Michael oversees our maintenance operations with a focus on rapid response and preventive care, ensuring residents enjoy comfortable, well-maintained homes.',
+    // },
   ];
 
   const achievements = [
