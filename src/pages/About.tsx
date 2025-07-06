@@ -6,13 +6,13 @@ const About = () => {
     {
       name: 'Paul LaBrue Jr.',
       title: 'Founder & CEO',
-      image: 'https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=400',
+      image: '/assets/PaulProfile.png',
       bio: 'With over 15 years in affordable housing development, Paul founded PDL Rentals with a mission to create quality communities that enhance residents\' lives while remaining accessible to working families. His extensive background, including over 30 years as an Insurance Adjuster helping people through vulnerable times, informs his dedicated approach to affordable housing.',
     },
     {
       name: 'Anthony Reyna',
       title: 'Founder & Chief Strategy Officer',
-      image: 'https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=400',
+      image: '/assets/AnthonyProfile.png',
       bio: "Anthony Reyna brings a unique blend of analytical prowess and innovative vision to his role as Chief Strategy Officer at PDL Rentals. With a foundation built on years as a skilled Insurance Adjuster, Anthony developed a keen ability to navigate complex situations and understand diverse needs. Beyond his professional background, Anthony is widely recognized for his exceptional intellect and broad knowledge base, often demonstrating a remarkable aptitude for complex systems and a passion for pioneering new frontiers. This combination of deep analytical thinking, a commitment to understanding human needs, and a forward-thinking, inventive spirit directly informs his strategic approach to enhancing resident experiences and driving leading-edge solutions within the residential rental property sector.",
     },
     {
