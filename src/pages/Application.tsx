@@ -896,7 +896,7 @@ const Application = () => {
               className="flex items-center text-blue-700 hover:text-blue-900 font-medium"
             >
               <Phone className="h-4 w-4 mr-2" />
-              Call us: (555) 123-4567
+              Call us: (316) 350-4020
             </a>
             <a
               href="mailto:applications@pdlrentals.com"

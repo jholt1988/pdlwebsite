@@ -353,8 +353,8 @@ const Contact = () => {
                 <MapPin className="h-12 w-12 text-gray-400 mx-auto mb-4" />
                 <p className="text-gray-600">Interactive map would be embedded here</p>
                 <p className="text-sm text-gray-500 mt-2">
-                  123 Main Street, Suite 100<br />
-                  Your City, ST 12345
+                  1531 N. Sheridan<br/>
+                  Wichita, KS 67203
                 </p>
               </div>
             </div>
